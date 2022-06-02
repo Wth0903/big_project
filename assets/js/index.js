@@ -20,7 +20,7 @@ function getUserInfo() {
 
 // 渲染用户信息
 const renderAvatar = user => {
-    console.log(user);
+    // console.log(user);
     let uname = user.nickname || user.username;
     // 渲染欢迎语
     $('#welcome').html(`欢迎 ${uname}`);
@@ -44,3 +44,7 @@ $('#btnlogout').click(() => {
     })
 })
 getUserInfo();
+
+function change() {
+    $('#change').attr('class', 'layui-this').next().attr('class', '')
+}
